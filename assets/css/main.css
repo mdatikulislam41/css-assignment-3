@@ -292,7 +292,14 @@ a.header_btn {
   justify-content: center;
   font-size: 16px;
   font-weight: 600;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
+.people_item:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
 .icon_item:first-child {
   margin-left: 0;
 }
@@ -404,7 +411,7 @@ form.hero_form {
     }
     .cat_item {
       position: relative;
-      transition: box-shadow 0.3s ease;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
       cursor: pointer;
       border-radius: 25px;
       background-color: var(--primary-color);
@@ -429,10 +436,16 @@ form.hero_form {
     }
     .cat_item:hover {
       box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      .bold_card {
+        opacity: 0;
+      }
     }
-    .cat_item:hover .bold_card {
-      opacity: 1;
-    }
+  }
+}
+.categories:has(.cat_item:hover) .cat_item:not(:hover) {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  .bold_card {
+    opacity: 1;
   }
 }
 
@@ -456,7 +469,7 @@ form.hero_form {
   inset: auto auto -30px -30px;
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .cat_image {
   position: relative;
