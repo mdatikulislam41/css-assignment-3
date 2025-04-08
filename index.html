@@ -20,12 +20,12 @@
     />
   </head>
   <body>
-    <header id="navbar">
+    <header id="navbar" class="wrapper">
       <nav>
         <div class="desktop_header menu desktop">
           <div class="left">
-            <a href="./index.html" alt="Home">
-              <img src="./assets/images/header/logo.png" alt="">
+            <a href="./index.html" alt="Home" class="image_link">
+              <img src="./assets/images/header/logo.png" alt="" class="header_logo" height="63px">
             </a>
           </div>
           <div class="middle">
@@ -56,7 +56,10 @@
           <div class="mobile-menu-wrapper">
             <div class="mobile-menu-left">
               <div class="logo">
-                <img src="./assets/images/header/logo.png" class="logo-img" alt="logo" />
+                <a href="./index.html" class="image_link">
+                  <img src="./assets/images/header/logo.png" class="logo-img" alt="logo" height="63px" />
+                </a>
+
               </div>
             </div>
             <div class="mobile-menu-right">
@@ -74,61 +77,63 @@
     </header>
     <main>
       <section id="hero">
-        <div class="hero_content">
-          <div class="hero_text">
-            <h1 class="large_heading">No matter where <br> you're going to, we'll <br> take you there</h1>
-           
-             
-              <form action="" class="hero_form">
-                <span>Where to?</span>
-                
-                <select name="country" id="travel_type">
-                  <option value="">Travel Type</option>
-                  <option value="1">Country 1</option>
-                  <option value="2">Country 2</option>
-                  <option value="3">Country 3</option>
-                </select>
-                <select name="country" id="duration">
-                  <option value="">Duration</option>
-                  <option value="1">Country 1</option>
-                  <option value="2">Country 2</option>
-                  <option value="3">Country 3</option>
-                </select>
-                <input type="submit" class="btn" value="Submit">
-          </form>
+        <div class="wrapper hero_wrapper inline_0 hero">         
+          <div class="hero_content">
+            <div class="hero_text">
+              <h1 class="large_heading">No matter where <br> you're going to, we'll <br> take you there</h1>
             
-            <div class="people">
-              <div class="people_icon">
-                <span class="people_item">
-                  <img src="./assets/images/hero/Ellipse-31.png" alt="" class="people_image">
-                </span><span class="people_item">
-                  <img src="./assets/images/hero/Ellipse-31.png" alt="" class="people_image">
-                </span><span class="people_item">
-                  <img src="./assets/images/hero/Ellipse-31.png" alt="" class="people_image">
-                </span><span class="people_item">
-                  <img src="./assets/images/hero/Ellipse-31.png" alt="" class="people_image">
-                </span><span class="people_item">
-                  <img src="./assets/images/hero/Ellipse-31.png" alt="" class="people_image">
-                </span><span class="people_item">
-                  <img src="./assets/images/hero/Ellipse-31.png" alt="" class="people_image">
-                </span>
-                <span class="people_item">
-                  +
-                </span>
-                
+              
+                <form action="" class="hero_form">
+                  <span>Where to?</span>
+                  
+                  <select name="country" id="travel_type">
+                    <option value="">Travel Type</option>
+                    <option value="1">Country 1</option>
+                    <option value="2">Country 2</option>
+                    <option value="3">Country 3</option>
+                  </select>
+                  <select name="country" id="duration">
+                    <option value="">Duration</option>
+                    <option value="1">Country 1</option>
+                    <option value="2">Country 2</option>
+                    <option value="3">Country 3</option>
+                  </select>
+                  <input type="submit" class="btn" value="Submit">
+            </form>
+              
+              <div class="people">
+                <div class="people_icon">
+                  <span class="people_item">
+                    <img src="./assets/images/hero/Ellipse-31.png" alt="" class="people_image">
+                  </span><span class="people_item">
+                    <img src="./assets/images/hero/Ellipse-32.png" alt="" class="people_image">
+                  </span><span class="people_item">
+                    <img src="./assets/images/hero/Ellipse-33.png" alt="" class="people_image">
+                  </span><span class="people_item">
+                    <img src="./assets/images/hero/Ellipse-34.png" alt="" class="people_image">
+                  </span><span class="people_item">
+                    <img src="./assets/images/hero/Ellipse-35.png" alt="" class="people_image">
+                  </span><span class="people_item">
+                    <img src="./assets/images/hero/Ellipse-36.png" alt="" class="people_image">
+                  </span>
+                  <span class="people_item">
+                    +
+                  </span>
+                  
+                </div>
+                  <div class="people_text">
+                    <p>2,500 people booked Tommorowland Event in last 24 hours</p>
+                </div>
               </div>
-                <div class="people_text">
-                  <p>2,500 people booked Tommorowland Event in last 24 hours</p>
+              <div class="hero_image">
+                <img src="./assets/images/hero/Group-2.png" alt="" />
               </div>
-            </div>
-            <div class="hero_image">
-              <img src="./assets/images/hero/Group-2.png" alt="" />
-            </div>
-        </div>
-        </div>
+          </div>
+          </div>
+      </div>
         </section>
       <section id="support">
-        <div class="wrapper">
+        <div class="wrapper inline_0">
           <div class="support_items">
             <img src="./assets/images/support/image-909.png" alt="" class="sup_item"> 
             <img src="./assets/images/support/Mask-group-1.png" alt="" class="sup_item"> 
@@ -139,10 +144,17 @@
           
             
           </div>
+          <div class="scroll">
+            <div class="circle_1">
+              <div class="box1"></div>
+              <div class="box2"></div>
+              <div class="scroll_text">Scroll</div>
+            </div>
+          </div>
         </div>
       </section>
       <section id="category">
-        <div class="wrapper">
+        <div class="wrapper category_wrapper inline_0">
           <div class="category_content">
             <div class="cat_top">
               <h5 class="promotion">CATEGORY</h5>
@@ -187,7 +199,7 @@
         </div>
       </section>
       <section id="sp_01">
-        <div class="wrapper">
+        <div class="wrapper honeymoon_wrapper inline_0">
           <div class="sp_container sp_c_01">
             <div class="item_1 sp_01">
               <img src="./assets/images/resort/sp_bg_1.png" alt="" class="sp_img"></div>
@@ -208,13 +220,12 @@
         </div>
       </section>
       <section id="sp_02">
-        <div class="wrapper">
+        <div class="wrapper fast_easy_wrapper inline_0">
           <div class="sp_container sp_c_02">
             <div class="item_1 sp_02">
               <div class="sp_content auto">
               <h5 class="promotion">Fast & Easy</h5>
-              <h2 class="large_heading">Get Your Favourite
-                Resort Bookings</h2>
+              <h2 class="large_heading">Get Your Favourite <br> Resort Bookings</h2>
                 <div class="icon_box">
                   <div class="icon_item">
                     <img src="./assets/images/resort/Group-7.png" alt="icon">
@@ -255,18 +266,20 @@
         </div>
       </section>
       <section id="holidy">
+        <div class="wrapper holidy">
         <div class="holidy_content">
-          <h2 class="large_heading">We Let’s make your next holiday amazing</h2>
+          <h2 class="large_heading">We Let's make <br> your next holiday amazing</h2>
           <img src="./assets/images/holiday/Line-1.png" alt="">
         </div>
+      </div>
       </section>
       <section id="tour">
-        <div class="wrapper">
+        <div class="wrapper promotion_wrapper">
          <div class="tour-container">
           <div class="col left">
             <div class="sp_content">
               <h5 class="promotion">Promotion</h5>
-              <h2 class="large_heading">We Provide You Best Europe Sightseeing Tours</h2>
+              <h2 class="large_heading">We Provide You Best <br> Europe Sightseeing Tours</h2>
               <p class="description">
                 Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos. Non quis eius quo eligendi corrupti et fugiat nulla qui soluta recusandae in maxime quasi aut ducimus illum aut optio quibusdam!
               </p>
@@ -289,24 +302,28 @@
         </div>
       </section>
       <section id="explore">
-        <div class="explore-1 ex_item">
-          <div class="ex_content">
-            <h5 class="promotion">Promotion</h5>
-            <h2 class="large_heading">Explore Nature</h2>
-            <a href="" alt="" class="package_btn">View Packages</a>
+        <div class="wrapper explore_wrapper inline_0">
+          <div class="explore">
+          <div class="explore-1 ex_item">
+            <div class="ex_content">
+              <h5 class="promotion">Promotion</h5>
+              <h2 class="large_heading">Explore Nature</h2>
+              <a href="" alt="" class="package_btn">View Packages</a>
+            </div>
+            <div class="image-box__overlay"></div>
           </div>
-          <div class="image-box__overlay"></div>
+          <div class="explore-2 ex_item">
+            <div class="ex_content">
+              <h5 class="promotion">Promotion</h5>
+              <h2 class="large_heading">Explore Nature</h2>
+              <a href="" alt="" class="package_btn">View Packages</a>
+            </div>
+          </div>
         </div>
-        <div class="explore-2 ex_item">
-          <div class="ex_content">
-            <h5 class="promotion">Promotion</h5>
-            <h2 class="large_heading">Explore Nature</h2>
-            <a href="" alt="" class="package_btn">View Packages</a>
-          </div>
         </div>
       </section>
       <section id="Packages">
-        <div class="wrapper packages-content">
+        <div class="wrapper packages-content tendy_wrapper">
           <div class="top_content">
             <h5 class="promotion">trendy</h5>
             <h2 class="large_heading">Our Trending Tour Packages</h2>
@@ -399,7 +416,7 @@
         </div>
       </section>
       <section id="testimonial">
-        <div class="testimonial">
+        <div class="testimonial wrapper testimonial_wrapper inline_0">
           <div class="testimonial-content">
             <div class="item">
               <h5>PROMOTION</h5>
@@ -434,7 +451,7 @@
       </section>
     </main>
     <footer>
-      <div class="wrapper">
+      <div class="wrapper footer_wrapper">
         <div class="widgets">
           <div class="item widget_1">
             <div class="logo">
@@ -527,6 +544,9 @@
         </div>
       </div>
     </footer>
+    <section>
+      <div class="test_wrapper"></div>
+    </section>
     <nav popover role="menu" class="visible" id="menu">
       <ul class="visible-content">
           <li class="nav_item"><a href="" class="nav_link nav_active">Home</a></li>
