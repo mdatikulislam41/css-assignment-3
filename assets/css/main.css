@@ -921,8 +921,8 @@ img.badge-img {
 /* Testimonial Design */
 
 .testimonial {
-  background: #ffffff url(../images/testimonial/h1-background-img-1.png) center
-    center/cover no-repeat;
+  background: #ffffff url(../images/testimonial/testimonial-bg.png) center
+    center/contain no-repeat;
 
   .testimonial-content {
     display: flex;
@@ -1455,5 +1455,151 @@ span.heart i {
     height: 100%;
     background-color: var(--fill-bg, var(--button-bg));
     border-radius: 10px;
+  }
+}
+
+/* Animation for iamge start */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .scale_motion {
+    animation: image-scale linear forwards;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+  }
+  .motion_left {
+    animation: transform__left linear forwards;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+  }
+
+  .motion_right {
+    animation: transform__right linear forwards;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+  }
+  .motion_bellow:nth-child(1) {
+    animation: transform__bellow_practice_1 linear forwards;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+  }
+  .motion_bellow:nth-child(2) {
+    animation: transform__bellow_practice_2 linear forwards;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+  }
+  .motion_bellow:nth-child(3) {
+    animation: transform__bellow_practice_3 linear forwards;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+  }
+  .motion_bellow:nth-child(4) {
+    animation: transform__bellow_practice_4 linear forwards;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+  }
+  .p_item:nth-child(1) {
+    animation: transform__left linear forwards;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+  }
+  .p_item:nth-child(2) {
+    animation: transform__bellow linear forwards;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+  }
+  .p_item:nth-child(3) {
+    animation: transform__right linear forwards;
+    animation-timeline: view();
+    animation-range: entry-crossing;
+  }
+  @keyframes image-scale {
+    from {
+      scale: 0.8;
+      opacity: 0;
+    }
+    to {
+      scale: 1 1;
+      opacity: 1;
+    }
+  }
+  @keyframes transform__left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes transform__right {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes transform__bellow {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes transform__bellow_practice_1 {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes transform__bellow_practice_2 {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes transform__bellow_practice_3 {
+    from {
+      transform: translateY(-0%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes transform__bellow_practice_4 {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes p_item {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }
