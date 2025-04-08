@@ -47,6 +47,9 @@ body {
   max-width: 1920px;
   margin-inline: auto;
 }
+select {
+  cursor: pointer;
+}
 /* Common Class */
 .wrapper {
   --max_width: 1920px;
@@ -213,10 +216,13 @@ a.header_btn {
 .nav_link {
   color: #fff;
   font-family: "Poppins";
+  padding-block: 5px;
+  &:hover {
+    border-bottom: var(--icon-bg) solid 2px;
+  }
 }
 .nav_active {
   border-bottom: var(--icon-bg) solid 2px;
-  padding-block: 5px;
 }
 .dropdown {
   position: relative;
@@ -385,6 +391,7 @@ form.hero_form {
 }
 .hero_text .large_heading {
   position: relative;
+  color: var(--button-text);
 }
 .hero_text .large_heading::before {
   position: absolute;
@@ -649,6 +656,14 @@ form.hero_form {
   position: relative;
   width: 231px;
   margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-10px);
+    img {
+      opacity: 0.8;
+    }
+  }
   @media (width > 1024px) {
     margin: unset;
   }
@@ -682,6 +697,9 @@ form.hero_form {
   padding-block-end: 10rem;
   background-color: var(--primary-color);
   padding-block-start: 3rem;
+  .col:nth-child(2) {
+    justify-content: flex-end;
+  }
 }
 
 .col:nth-child(1) {
@@ -812,20 +830,31 @@ form.hero_form {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    --item-gap: 1rem;
+    --item-gap: 52px;
     gap: var(--item-gap);
   }
 }
 .p_item {
   width: calc(var(--width) * 12);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
   @media (width > 1024px) {
     width: calc((var(--width) * 4) - var(--item-gap));
+    box-shadow: unset;
+    border-radius: unset;
   }
   .image {
     position: relative;
     .p_item_img {
       width: 100%;
     }
+  }
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
   }
 }
 .activity {
@@ -881,6 +910,9 @@ form.hero_form {
   font-family: var(--popins);
   line-height: 2;
   margin-bottom: 2rem;
+  &:is(.m_width) {
+    width: min(35rem, 100%);
+  }
 }
 img.badge-img {
   position: absolute;
@@ -1256,6 +1288,26 @@ button:hover {
 }
 a.image_link {
   display: flex;
+}
+.hover_bg {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--button-bg);
+    i {
+      color: var(--button-text);
+    }
+  }
+}
+.hover_color {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    color: var(--button-text);
+    i {
+      color: var(--button-text);
+    }
+  }
 }
 /* Circle Scroll */
 .scroll {
