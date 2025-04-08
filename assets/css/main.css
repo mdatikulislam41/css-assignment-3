@@ -698,7 +698,7 @@ form.hero_form {
   text-align: right;
 }
 .tour-image img {
-  scale: 0.8 0.8;
+  scale: 0.8 1;
   transform: translateY(6rem);
 }
 /* Explore design */
@@ -1245,6 +1245,7 @@ button:hover {
   display: none;
   @media (width > 1024px) {
     display: flex;
+    justify-content: flex-end;
   }
 }
 a.image_link {
