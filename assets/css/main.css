@@ -846,6 +846,22 @@ form.hero_form {
     }
   }
 }
+.explore_heading {
+  position: relative;
+  z-index: 1;
+}
+.explore_heading::before {
+  content: "";
+  background-image: url(../images/explore/Line-1.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 187px;
+  height: 19px;
+  z-index: -1;
+  right: -40px;
+  bottom: -10px;
+}
+
 /* Packages Design */
 .packages-content {
   padding-block-start: 5rem;
