@@ -308,7 +308,7 @@ a.header_btn {
 .hero_text > *:not(:last-child) {
   margin-bottom: 2rem;
 }
-nav {
+nav.header_nav {
   margin-inline: var(--nav-inline);
 }
 
@@ -1693,4 +1693,11 @@ span.heart i {
       opacity: 1;
     }
   }
+}
+
+.overly {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
 }
