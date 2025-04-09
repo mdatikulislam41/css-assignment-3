@@ -37,6 +37,7 @@
   --circle-color: #ffffff;
   --circle-width: 5px;
   --header-top: 63px;
+  --nav-inline: 10%;
 }
 html {
   interpolate-size: allow-keywords;
@@ -308,7 +309,7 @@ a.header_btn {
   margin-bottom: 2rem;
 }
 nav {
-  margin-inline: 16.155%;
+  margin-inline: var(--nav-inline);
 }
 
 /* Header Fixing End */
@@ -321,7 +322,9 @@ nav {
   justify-content: center;
   align-items: center;
   @media (width > 1024px) {
-    padding: 3px 200px;
+    align-items: flex-start;
+    padding-block: 3px;
+    padding-inline-start: calc(var(--nav-inline) + 1rem);
     /* height: 550px; */
   }
 }
@@ -420,11 +423,12 @@ form.hero_form {
 .hero_content {
   width: min(44rem, 90%);
 }
-.hero_text .large_heading {
+.hero_heading.large_heading {
   position: relative;
   color: var(--button-text);
+  text-align: left;
 }
-.hero_text .large_heading::before {
+.hero_heading.large_heading::before {
   position: absolute;
   content: "";
   background-image: url(../images/hero/Vector-1.png);
