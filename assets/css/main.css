@@ -36,6 +36,7 @@
   --inter: "Inter", sans-serif;
   --circle-color: #ffffff;
   --circle-width: 5px;
+  --header-top: 63px;
 }
 html {
   interpolate-size: allow-keywords;
@@ -53,13 +54,18 @@ select {
 /* Common Class */
 .wrapper {
   --max_width: 1920px;
-  --inline: 20px;
+  --inline: 10px;
   width: 100%;
   max-width: var(--max_width);
   margin: 0 auto;
   padding: 0 var(--inline);
   &:is(.inline_0) {
     --inline: 0;
+  }
+  &:is(.mobile_padding_inline) {
+    @media (width < 768px) {
+      --inline: 10px;
+    }
   }
   &:is(.footer_wrapper) {
     --max_width: 1540px;
@@ -201,7 +207,7 @@ a.header_btn {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 5px;
 }
 #navbar {
   padding-inline: 1rem;
@@ -281,20 +287,45 @@ a.header_btn {
   font-weight: 400;
   letter-spacing: 1px;
 }
+/* Header Fixing start */
+#navbar {
+  position: absolute;
+  top: var(--header-top);
+}
+#hero {
+  background: url("../images/hero/hero-bg.png") no-repeat center center/cover;
+  padding-top: calc(var(--header-top) + 67px);
+  padding-bottom: 236px;
+}
+#navbar {
+  padding-inline: 1rem;
+  padding-block: 2px;
+}
+.hero_content {
+  padding-top: calc(298px - calc(var(--header-top) + 67px));
+}
+.hero_text > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+nav {
+  margin-inline: 16.155%;
+}
+
+/* Header Fixing End */
 /* Hero Section */
 .hero {
   display: flex;
   flex-direction: column;
   padding: 3px 20px;
-  height: 90dvh;
+  /* height: 90dvh; */
   justify-content: center;
   align-items: center;
   @media (width > 1024px) {
     padding: 3px 200px;
-    height: 550px;
+    /* height: 550px; */
   }
 }
-.hero::before {
+/* .hero::before {
   content: "";
   position: absolute;
   background: url("../images/hero/hero-bg.png") no-repeat center center/cover;
@@ -303,7 +334,7 @@ a.header_btn {
   left: 0px;
   width: 100%;
   z-index: -1;
-}
+} */
 .people {
   display: flex;
   flex-direction: column;
@@ -402,13 +433,15 @@ form.hero_form {
   width: 100%;
   height: 100%;
 }
-.hero_text > * {
+/* .hero_text > * {
   margin-bottom: 2rem;
-}
+} */
+
 /* Support Design */
 #support {
-  background-color: #f7f7f7;
+  background-color: #fff;
   position: relative;
+  z-index: 1;
   .support_items {
     display: flex;
     flex-direction: row;
@@ -420,6 +453,7 @@ form.hero_form {
     white-space: nowrap;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    background-color: #f7f7f7;
     img {
       cursor: pointer;
     }
@@ -609,7 +643,7 @@ form.hero_form {
 .sp_content {
   padding-bottom: 3rem;
 
-  width: min(50rem, 90%);
+  width: min(50rem, 100%);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -792,6 +826,7 @@ form.hero_form {
   }
   .large_heading {
     color: var(--button-text);
+    text-align: center;
   }
   .package_btn {
     margin-top: 2rem;
@@ -1251,12 +1286,21 @@ button:hover {
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  text-align: center;
+  @media (width > 768px) {
+    text-align: inherit;
+  }
 }
 .large_heading {
-  font-size: 50px;
+  font-size: 30px;
   color: var(--heading);
   font-family: var(--volkhov);
   font-weight: 700;
+  text-align: center;
+  @media (width > 768px) {
+    font-size: 50px;
+    text-align: inherit;
+  }
 }
 
 .space_between {
@@ -1312,28 +1356,45 @@ a.image_link {
 /* Circle Scroll */
 .scroll {
   position: absolute;
-  display: flex;
+
   align-items: center;
   justify-content: center;
-  top: -75%;
+
+  top: -45%;
   left: 25px;
   z-index: -1;
+  @media (width > 768px) {
+    display: flex;
+    /* top: 45%;
+    left: 5%; */
+    top: -80%;
+    left: 25px;
+  }
 }
 
 .box1 {
   border-radius: 50%;
   animation: animName 5s linear infinite;
-  width: 300px;
-  height: 300px;
+  width: 180px;
+  height: 180px;
   border: var(--circle-width) dotted var(--circle-color);
+  @media (width > 768px) {
+    width: 300px;
+    height: 300px;
+    display: block;
+  }
 }
 .box2 {
   border-radius: 50%;
   animation: animName 5s linear infinite;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border: var(--circle-width) dotted var(--circle-color);
   position: absolute;
+  @media (width > 768px) {
+    width: 150px;
+    height: 150px;
+  }
 }
 .circle_1 {
   position: relative;
@@ -1371,7 +1432,10 @@ a.image_link {
   position: relative;
   margin: 0 auto;
   top: 18%;
-  left: -12%;
+  left: 0;
+  @media (width > 768px) {
+    left: -12%;
+  }
 }
 .air_content {
   width: min(370px, 100%);
@@ -1382,6 +1446,9 @@ a.image_link {
   justify-content: space-between;
   padding-block: 25px;
   background: var(--primary-color);
+}
+.resort_image img {
+  width: 100%;
 }
 .resort_react {
   display: flex;
@@ -1428,8 +1495,12 @@ span.heart i {
   gap: 15px;
   align-items: center;
   position: absolute;
-  bottom: 12%;
-  right: -30%;
+  bottom: -40%;
+  right: 0%;
+  @media (width > 768px) {
+    bottom: 12%;
+    right: -30%;
+  }
 }
 .going_content {
   display: flex;
